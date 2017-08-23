@@ -76,4 +76,78 @@ Create a Query so that you can have result set and then you can loop the values 
 
 ***
 
+# Displaying the Records using a Pagination Library. 
+
+When we want to display records in Page. For Example 10 records in 1 page and then other 10 on others. 
+
+We will use Brave CMS Library to achive this easily. 
+
+Once Library is kept you need to speicify. 
+- SQL Connection
+- SQL Query
+- No of Records Per Page you want to list
+
+And the Library automatically returns 
+An Array that you can Loop using foreach. 
+
+## Step 1 Include library into your php file as shown below. 
+
+``` php
+<?php 
+include("connection.php");
+include("library/pageination_extended.php");
+?>
+```
+## Step 2  Configure the Library as showing in example below. 
+
+```php
+<?php
+$config = array();
+$config['query'] =  "select * from user";
+$config['con'] = $con;
+$config['rows_per_page'] = 1;
+$config['page_no_variable']="page_no";
+
+$pagination = new pagination($config);
+$result_array  = $pagination->get_array();
+?>
+```
+# Step 3 Loop the data into table to display
+
+```php
+<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+			</tr>
+		</thead>
+			<?php 
+			foreach ($result_array as $user_row) 
+			{
+			 	?>
+			 	<tr>
+				 	<td><?php echo  $user_row['id']; ?></td>
+				 	<td><?php echo  $user_row['name']; ?></td>
+			 	</tr>
+			 	<?php
+			 }
+			  ?>
+	</table>
+```
+
+Step 5 : Adding Navigation bar to move between Pages.  
+
+```php
+<?php 
+$pagination->show_links_google_type();
+ ?>
+```
+You can place this anywhere you want to display the links. 
+
+
+
+
+
+
 
