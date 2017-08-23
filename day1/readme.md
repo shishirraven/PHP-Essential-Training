@@ -147,13 +147,58 @@ $pagination->show_links_google_type();
 ```
 You can place this anywhere you want to display the links. 
 
+## Step 5 : Per Page Selector. 
+You can optionally allow the users to select how many records they want to display on a page. 
+Using the following code. 
+
+``` php
+	<?php echo $pagination->perpage_selector(); ?>
+```
+
+## Step 6 : Per Page Selector. 
+To show total no of Records to let the user know. 
+You can use the following code. 
+
+``` php
+<p>
+Total Records : <?php echo $pagination->show_total_records(); ?>
+</p>
+```
+
+## Step 7 : If you want the users to click on table header and have it sorted. You can do so in the following fashion. 
+
+```php
+<th><?php echo $pagination->sortable_label('id',"ID") ?></th>
+```
+So the final code should appear as following. 
+
+```php
+<table class="table">
+		<thead>
+			<tr>
+				<th><?php echo $pagination->sortable_label('id',"ID") ?></th>
+				<th><?php echo $pagination->sortable_label('name',"Name") ?></th>
+			</tr>
+		</thead>
+			<?php 
+			foreach ($row_array as $user_row) 
+			{
+			 	?>
+			 	<tr>
+				 	<td><?php echo  $user_row['id']; ?></td>
+				 	<td><?php echo  $user_row['name']; ?></td>
+			 	</tr>
+			 	<?php
+			 }
+			  ?>
+	</table>
+```
+
 ***
 
+> Other lessons are avaiable here. https://github.com/shishirraven/PHP-Essential-Training
 
-> This shoudl work great whenever you want. 
-
-
-
+Thank You!
 
 
 
