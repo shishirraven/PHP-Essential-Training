@@ -78,6 +78,8 @@ Create a Query so that you can have result set and then you can loop the values 
 
 # Displaying the Records using a Pagination Library. 
 
+Dependency [Brave CMS Pagination Library](https://github.com/shishirraven/Brave-CMS-Library)
+
 When we want to display records in Page. For Example 10 records in 1 page and then other 10 on others. 
 
 We will use Brave CMS Library to achive this easily. 
@@ -112,7 +114,7 @@ $pagination = new pagination($config);
 $result_array  = $pagination->get_array();
 ?>
 ```
-# Step 3 Loop the data into table to display
+## Step 3 Loop the data into table to display
 
 ```php
 <table class="table">
@@ -136,7 +138,7 @@ $result_array  = $pagination->get_array();
 </table>
 ```
 
-Step 5 : Adding Navigation bar to move between Pages.  
+## Step 4 : Adding Navigation bar to move between Pages.  
 
 ```php
 <?php 
@@ -144,6 +146,12 @@ $pagination->show_links_google_type();
  ?>
 ```
 You can place this anywhere you want to display the links. 
+
+***
+
+
+> This shoudl work great whenever you want. 
+
 
 
 
