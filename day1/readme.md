@@ -116,24 +116,24 @@ $result_array  = $pagination->get_array();
 
 ```php
 <table class="table">
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Name</th>
-			</tr>
-		</thead>
-			<?php 
-			foreach ($result_array as $user_row) 
-			{
-			 	?>
-			 	<tr>
-				 	<td><?php echo  $user_row['id']; ?></td>
-				 	<td><?php echo  $user_row['name']; ?></td>
-			 	</tr>
-			 	<?php
-			 }
-			  ?>
-	</table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<?php 
+	foreach ($result_array as $user_row) 
+	{
+	 	?>
+	 	<tr>
+		 	<td><?php echo  $user_row['id']; ?></td>
+		 	<td><?php echo  $user_row['name']; ?></td>
+	 	</tr>
+	 	<?php
+	 }
+	  ?>
+</table>
 ```
 
 Step 5 : Adding Navigation bar to move between Pages.  
