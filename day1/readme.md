@@ -94,7 +94,7 @@ An Array that you can Loop using foreach.
 
 ## Step 1 Include library into your php file as shown below. 
 
-``` php
+```php
 <?php 
 include("connection.php");
 include("library/pageination_extended.php");
@@ -159,7 +159,7 @@ Using the following code.
 To show total no of Records to let the user know. 
 You can use the following code. 
 
-``` php
+```php
 <p>
 Total Records : <?php echo $pagination->show_total_records(); ?>
 </p>
@@ -172,7 +172,7 @@ Total Records : <?php echo $pagination->show_total_records(); ?>
 ```
 So the final code should appear as following. 
 
-```php
+```PHP
 <table class="table">
 		<thead>
 			<tr>
