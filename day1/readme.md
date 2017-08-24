@@ -204,7 +204,7 @@ if($pagination->has_results())
     
     <?php } ?>
 ```
-If you wrap the code with the above statement them the tables will appear with headers only when their are records in the 
+If you wrap the tables with the above statement them the tables will appear with headers only when their are records in the 
 database. 
 
 ## Step 9 Showing a No Records Message. 
