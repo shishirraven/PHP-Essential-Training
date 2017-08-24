@@ -87,7 +87,7 @@ We will use Brave CMS Library to achive this easily.
 Once Library is kept you need to speicify. 
 - SQL Connection
 - SQL Query
-- No of Records Per Page you want to list
+- Number of Records Per Page you want to list
 
 And the Library automatically returns 
 An Array that you can Loop using foreach. 
