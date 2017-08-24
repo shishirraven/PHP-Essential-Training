@@ -194,6 +194,33 @@ So the final code should appear as following.
 	</table>
 ```
 
+## Step 8 Showing Table headers only when their are Records available. 
+
+```php
+
+if($pagination->has_results()) 
+  {
+    ?>
+    
+    <?php } ?>
+```
+If you wrap the code with the above statement them the tables will appear with headers only when their are records in the 
+database. 
+
+## Step 9 Showing a No Records Message. 
+
+```php
+<?php 
+if($pagination->has_no_results())
+{
+ ?>
+ <div uk-alert>
+   No Records Found
+ </div>
+<?php } ?>
+
+```
+
 ***
 
 > Other lessons are avaiable here. https://github.com/shishirraven/PHP-Essential-Training
