@@ -176,8 +176,8 @@ So the final code should appear as following.
 <table class="table">
 		<thead>
 			<tr>
-				<th><?php echo $pagination->sortable_label('id',"ID") ?></th>
-				<th><?php echo $pagination->sortable_label('name',"Name") ?></th>
+				<th><?php echo $pagination->sortable_label('id',"ID"); ?></th>
+				<th><?php echo $pagination->sortable_label('name',"Name"); ?></th>
 			</tr>
 		</thead>
 			<?php 
