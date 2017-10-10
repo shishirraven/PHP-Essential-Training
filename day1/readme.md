@@ -155,7 +155,7 @@ Using the following code.
 	<?php echo $pagination->perpage_selector(); ?>
 ```
 
-## Step 6 : Per Page Selector. 
+## Step 6 : Total No. of Records
 To show total no of Records to let the user know. 
 You can use the following code. 
 
